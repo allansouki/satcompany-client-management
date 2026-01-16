@@ -16,9 +16,18 @@ return new class extends Migration
             $table->string('name');
             $table->string('cpf', 11)->unique();
             $table->string('email')->unique();
-            $table->string('phone', 20)->nullable();
+            $table->string('phone', 20);
+            $table->string('cep', 8);
+            $table->string('street');
+            $table->string('neighborhood');
+            $table->string('number', 10);
+            $table->string('complement')->nullable();
+            $table->string('city');
+            $table->string('state', 2);
+            $table->enum('status', ['ativo', 'inativo'])->default('ativo');
             $table->timestamps();
-        });
+});
+
     }
 
     /**

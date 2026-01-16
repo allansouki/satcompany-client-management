@@ -1,0 +1,315 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/clients
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '[{"id":5,"name":"Jo\u00e3o da Silva","cpf":"11122233344","email":"joao.silva1@email.com","phone":"11987654321","cep":"01001000","street":"Pra\u00e7a da S\u00e9","neighborhood":"S\u00e9","number":"10","complement":null,"city":"S\u00e3o Paulo","state":"SP","status":"ativo","created_at":null,"updated_at":null},{"id":6,"name":"Maria Oliveira","cpf":"22233344455","email":"maria.oliveira2@email.com","phone":"11976543210","cep":"01310930","street":"Avenida Paulista","neighborhood":"Bela Vista","number":"1578","complement":null,"city":"S\u00e3o Paulo","state":"SP","status":"ativo","created_at":null,"updated_at":null},{"id":7,"name":"Carlos Pereira","cpf":"33344455566","email":"carlos.pereira3@email.com","phone":"21998765432","cep":"20040002","street":"Rua da Assembleia","neighborhood":"Centro","number":"50","complement":null,"city":"Rio de Janeiro","state":"RJ","status":"ativo","created_at":null,"updated_at":null},{"id":8,"name":"Ana Souza","cpf":"44455566677","email":"ana.souza4@email.com","phone":"31991234567","cep":"30130010","street":"Avenida Afonso Pena","neighborhood":"Centro","number":"1000","complement":null,"city":"Belo Horizonte","state":"MG","status":"ativo","created_at":null,"updated_at":null},{"id":9,"name":"Pedro Santos","cpf":"55566677788","email":"pedro.santos5@email.com","phone":"11999887766","cep":"04003000","street":"Rua Vergueiro","neighborhood":"Liberdade","number":"200","complement":null,"city":"S\u00e3o Paulo","state":"SP","status":"ativo","created_at":null,"updated_at":null},{"id":10,"name":"Fernanda Lima","cpf":"66677788899","email":"fernanda.lima6@email.com","phone":"21987651234","cep":"22041001","street":"Rua Barata Ribeiro","neighborhood":"Copacabana","number":"300","complement":null,"city":"Rio de Janeiro","state":"RJ","status":"inativo","created_at":null,"updated_at":null},{"id":11,"name":"Rafael Costa","cpf":"77788899900","email":"rafael.costa7@email.com","phone":"41991223344","cep":"80010000","street":"Rua XV de Novembro","neighborhood":"Centro","number":"500","complement":null,"city":"Curitiba","state":"PR","status":"ativo","created_at":null,"updated_at":null},{"id":12,"name":"Juliana Rocha","cpf":"88899900011","email":"juliana.rocha8@email.com","phone":"51999887755","cep":"90010000","street":"Rua dos Andradas","neighborhood":"Centro Hist\u00f3rico","number":"600","complement":null,"city":"Porto Alegre","state":"RS","status":"ativo","created_at":null,"updated_at":null},{"id":13,"name":"Bruno Martins","cpf":"99900011122","email":"bruno.martins9@email.com","phone":"61988776655","cep":"70040900","street":"Esplanada dos Minist\u00e9rios","neighborhood":"Zona C\u00edvico-Administrativa","number":"1","complement":null,"city":"Bras\u00edlia","state":"DF","status":"ativo","created_at":null,"updated_at":null},{"id":14,"name":"Camila Ferreira","cpf":"00011122233","email":"camila.ferreira10@email.com","phone":"85991234567","cep":"60060000","street":"Avenida Dom Lu\u00eds","neighborhood":"Meireles","number":"900","complement":null,"city":"Fortaleza","state":"CE","status":"inativo","created_at":null,"updated_at":null},{"id":45,"name":"Cliente 1","cpf":"06132651684","email":"cliente1_1768525441@teste.com","phone":"11937501547","cep":"34388420","street":"Rua Teste","neighborhood":"Centro","number":"401","complement":null,"city":"Porto Alegre","state":"PR","status":"inativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":46,"name":"Cliente 2","cpf":"29846447268","email":"cliente2_1768525441@teste.com","phone":"11982997623","cep":"16003012","street":"Rua Teste","neighborhood":"Centro","number":"183","complement":null,"city":"Rio de Janeiro","state":"MG","status":"ativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":47,"name":"Cliente 3","cpf":"45210621268","email":"cliente3_1768525441@teste.com","phone":"11944287942","cep":"54856706","street":"Rua Teste","neighborhood":"Centro","number":"299","complement":null,"city":"Rio de Janeiro","state":"RS","status":"inativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":48,"name":"Cliente 4","cpf":"01910759230","email":"cliente4_1768525441@teste.com","phone":"11976526855","cep":"63861367","street":"Rua Teste","neighborhood":"Centro","number":"487","complement":null,"city":"Porto Alegre","state":"RS","status":"inativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":49,"name":"Cliente 5","cpf":"97729281332","email":"cliente5_1768525441@teste.com","phone":"11938133749","cep":"63110766","street":"Rua Teste","neighborhood":"Centro","number":"108","complement":null,"city":"S\u00e3o Paulo","state":"RJ","status":"ativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":50,"name":"Cliente 6","cpf":"19273579138","email":"cliente6_1768525441@teste.com","phone":"11987865593","cep":"74765893","street":"Rua Teste","neighborhood":"Centro","number":"71","complement":null,"city":"Curitiba","state":"RS","status":"ativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":51,"name":"Cliente 7","cpf":"31217295425","email":"cliente7_1768525441@teste.com","phone":"11991581657","cep":"59579546","street":"Rua Teste","neighborhood":"Centro","number":"129","complement":null,"city":"Curitiba","state":"MG","status":"ativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":52,"name":"Cliente 8","cpf":"37011228535","email":"cliente8_1768525441@teste.com","phone":"11985172963","cep":"06593893","street":"Rua Teste","neighborhood":"Centro","number":"411","complement":null,"city":"Porto Alegre","state":"SP","status":"inativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":53,"name":"Cliente 9","cpf":"19447279460","email":"cliente9_1768525441@teste.com","phone":"11928758946","cep":"45874534","street":"Rua Teste","neighborhood":"Centro","number":"334","complement":null,"city":"Porto Alegre","state":"RS","status":"ativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"},{"id":54,"name":"Cliente 10","cpf":"64486046008","email":"cliente10_1768525441@teste.com","phone":"11959836525","cep":"83411453","street":"Rua Teste","neighborhood":"Centro","number":"254","complement":null,"city":"S\u00e3o Paulo","state":"MG","status":"ativo","created_at":"15\/01\/2026","updated_at":"15\/01\/2026"}]'
+        headers:
+          content-type: 'text/html; charset=utf-8'
+          cache-control: 'no-cache, private'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/clients
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'O campo value não deve conter mais de 255 caracteres.'
+        required: true
+        example: vmqeopfuudtdsufvyvddq
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      cpf:
+        custom: []
+        name: cpf
+        description: 'O campo value deve conter 11 caracteres.'
+        required: true
+        example: amniihfqcoy
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      email:
+        custom: []
+        name: email
+        description: 'O campo value não contém um endereço de e-mail válido.'
+        required: true
+        example: agustin98@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      phone:
+        custom: []
+        name: phone
+        description: 'O campo value não deve conter mais de 20 caracteres.'
+        required: true
+        example: hdtqtqxbajwbpilpm
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      cep:
+        custom: []
+        name: cep
+        description: 'O campo value deve conter 8 caracteres.'
+        required: true
+        example: ufinllwl
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      street:
+        custom: []
+        name: street
+        description: 'O campo value não deve conter mais de 255 caracteres.'
+        required: true
+        example: oauydlsmsjuryvojcybzv
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      neighborhood:
+        custom: []
+        name: neighborhood
+        description: 'O campo value não deve conter mais de 255 caracteres.'
+        required: true
+        example: rbyickznkygloigmkwxph
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      number:
+        custom: []
+        name: number
+        description: 'O campo value não deve conter mais de 10 caracteres.'
+        required: true
+        example: lvazjrcnf
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      complement:
+        custom: []
+        name: complement
+        description: 'O campo value não deve conter mais de 255 caracteres.'
+        required: false
+        example: baqywuxhgjjmzuxjubqou
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      city:
+        custom: []
+        name: city
+        description: 'O campo value não deve conter mais de 255 caracteres.'
+        required: true
+        example: zswiwxtrkimfcatbxspzm
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      state:
+        custom: []
+        name: state
+        description: 'O campo value deve conter 2 caracteres.'
+        required: true
+        example: ra
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: true
+        example: inativo
+        type: string
+        enumValues:
+          - ativo
+          - inativo
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: vmqeopfuudtdsufvyvddq
+      cpf: amniihfqcoy
+      email: agustin98@example.com
+      phone: hdtqtqxbajwbpilpm
+      cep: ufinllwl
+      street: oauydlsmsjuryvojcybzv
+      neighborhood: rbyickznkygloigmkwxph
+      number: lvazjrcnf
+      complement: baqywuxhgjjmzuxjubqou
+      city: zswiwxtrkimfcatbxspzm
+      state: ra
+      status: inativo
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/clients/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the client.'
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 5
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 201
+        content: '{"id":5,"name":"Jo\u00e3o da Silva","cpf":"11122233344","email":"joao.silva1@email.com","phone":"11987654321","cep":"01001000","street":"Pra\u00e7a da S\u00e9","neighborhood":"S\u00e9","number":"10","complement":null,"city":"S\u00e3o Paulo","state":"SP","status":"ativo","created_at":null,"updated_at":null}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/clients/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the client.'
+        required: true
+        example: 5
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 5
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

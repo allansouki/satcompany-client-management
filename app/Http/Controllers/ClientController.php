@@ -3,63 +3,119 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreClientRequest;
+use App\Http\Requests\UpdateClientRequest;
+use App\Enums\StateEnum;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\JsonResponse;
 
 class ClientController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Lista os clientes.
+     *
+     * Retorna a view de listagem com paginação.
+     *
+     * @return View
      */
-    public function index()
+    public function index(): View
     {
-        //
+        $clients = Client::paginate(30);
+
+        return view('clients.index', compact('clients'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Exibe o formulário de criação de cliente.
+     *
+     * Carrega os estados a partir do Enum.
+     *
+     * @return View
      */
-    public function create()
+    public function create(): View
     {
-        //
+        $states = array_map(
+            fn ($state) => $state->value,
+            StateEnum::cases()
+        );
+
+        return view('clients.create', compact('states'));
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Armazena um novo cliente.
+     *
+     * Retorno em JSON para consumo via AJAX.
+     *
+     * @return JsonResponse
      */
-    public function store(Request $request)
+    public function store(StoreClientRequest $request): JsonResponse
     {
-        //
+        $client = Client::create($request->all());
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Cliente cadastrado com sucesso',
+            'data'    => $client,
+        ]);
     }
 
     /**
-     * Display the specified resource.
+     * Exibe os detalhes de um cliente específico.
+     *
+     * @return View
      */
-    public function show(Client $client)
+    public function show(Client $client): View
     {
-        //
+        return view('clients.show', compact('client'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Exibe o formulário de edição do cliente.
+     *
+     * @return View
      */
-    public function edit(Client $client)
+    public function edit(Client $client): View
     {
-        //
+        $states = array_map(
+            fn ($state) => $state->value,
+            StateEnum::cases()
+        );
+
+        return view('clients.edit', compact('client', 'states'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Atualiza os dados de um cliente.
+     *
+     * Retorno em JSON para consumo via AJAX.
+     *
+     * @return JsonResponse
      */
-    public function update(Request $request, Client $client)
+    public function update(UpdateClientRequest $request, Client $client): JsonResponse
     {
-        //
+        $client->update($request->except('cpf'));
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Cliente atualizado com sucesso',
+        ]);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove um cliente.
+     *
+     * Retorno em JSON para consumo via AJAX.
+     *
+     * @return JsonResponse
      */
-    public function destroy(Client $client)
+    public function destroy(Client $client): JsonResponse
     {
-        //
+        $client->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Cliente excluído com sucesso',
+        ]);
     }
 }
